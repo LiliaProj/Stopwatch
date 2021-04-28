@@ -11,7 +11,7 @@ function App() {
 
   const click$ = fromEvent(document.getElementById("wait"), "click");
   const doubleClick$ = click$.pipe(
-    buffer(click$.pipe(debounceTime(250))),
+    buffer(click$.pipe(debounceTime(300))),
     map((clicks) => clicks.length),
     filter((clicksLength) => clicksLength >= 2)
   );
